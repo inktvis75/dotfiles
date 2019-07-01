@@ -34,6 +34,7 @@ antibody bundle zdharma/fast-syntax-highlighting
 antibody bundle zsh-users/zsh-autosuggestions
 antibody bundle zsh-users/zsh-completions
 antibody bundle denysdovhan/spaceship-prompt
+antibody bundle peterhurford/git-aliases.zsh
 
 # spaceship
 spaceship_vi_mode_enable
