@@ -15,4 +15,4 @@ port install kubectl-1.23
 port select --set kubectl kubectl1.23
 port install tmux
 port install tmux-pasteboard
-
+port install jq
