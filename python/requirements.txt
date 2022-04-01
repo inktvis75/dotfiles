@@ -1,0 +1,7 @@
+sphinx
+sphinx-book-theme
+rstcheck
+sphinxcontrib-tikz
+sphinx-jekyll-builder
+sphinx_last_updated_by_git
+pynvim
