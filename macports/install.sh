@@ -18,3 +18,5 @@ port install tmux-pasteboard
 port install jq
 port install go
 port install antibody
+port install exa
+port install bat
