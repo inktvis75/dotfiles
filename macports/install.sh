@@ -20,3 +20,4 @@ port install go
 port install antibody
 port install exa
 port install bat
+port install alacritty
