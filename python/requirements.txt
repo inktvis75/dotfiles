@@ -4,4 +4,5 @@ rstcheck
 sphinxcontrib-tikz
 sphinx-jekyll-builder
 sphinx_last_updated_by_git
+ansible
 pynvim
