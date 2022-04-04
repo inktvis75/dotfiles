@@ -18,6 +18,12 @@ call plug#end()
 syntax enable
 set hlsearch
 
+" wrap 
+set wrap linebreak nolist
+set textwidth=79
+set formatoptions+=l 
+set whichwrap+=<,>,h,l
+
 " indentation rules
 let g:indentLine_char = '⦙'
 set tabstop=4

@@ -21,3 +21,4 @@ port install antibody
 port install exa
 port install bat
 port install alacritty
+port install wget
