@@ -34,7 +34,7 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:::::' completer _expand _complete _ignored _approximate
 
 # Spaceship
-PACESHIP_PROMPT_ORDER=(
+SPACESHIP_PROMPT_ORDER=(
     user          
     dir    
     host   
