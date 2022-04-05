@@ -22,3 +22,5 @@ port install exa
 port install bat
 port install alacritty
 port install wget
+port install zathura
+port install zathura-plugin-pdf-mupdf

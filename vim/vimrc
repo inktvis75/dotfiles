@@ -12,6 +12,8 @@ Plug 'Sirver/ultisnips'
 Plug 'pearofducks/ansible-vim', { 'do': './UltiSnips/generate.sh' }
 Plug 'honza/vim-snippets'
 Plug 'Yggdroot/indentLine'
+Plug 'ckunte/latex-snippets-vim', { 'tag': '*' }
+Plug 'lervag/vimtex'
 call plug#end()
 
 " highlight
@@ -53,3 +55,7 @@ let g:nord_bold_vertical_split_line = 1
 let g:nord_italic_comments = 1
 let g:nord_italic_comments = 1
 hi Visual term=reverse cterm=reverse guibg=Grey
+
+" latex 
+let g:vimtex_view_method = 'zathura'
+
