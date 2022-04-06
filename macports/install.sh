@@ -25,3 +25,4 @@ port install wget
 port install zathura
 port install zathura-plugin-pdf-mupdf
 port install imagemagick
+port install yq
