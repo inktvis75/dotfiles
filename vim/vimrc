@@ -1,29 +1,41 @@
+" language and encoding
 set encoding=utf-8
-call plug#begin()
-Plug 'tpope/vim-fugitive'
-Plug 'arcticicestudio/nord-vim'
-Plug 'rhysd/vim-grammarous'
-Plug 'habamax/vim-rst'
-Plug 'itchyny/lightline.vim'
-Plug 'junegunn/fzf'
-Plug 'jayli/vim-easycomplete'
-Plug 'chase/vim-ansible-yaml'
-Plug 'Sirver/ultisnips'
-Plug 'pearofducks/ansible-vim', { 'do': './UltiSnips/generate.sh' }
-Plug 'honza/vim-snippets'
-Plug 'Yggdroot/indentLine'
-Plug 'ckunte/latex-snippets-vim', { 'tag': '*' }
-Plug 'lervag/vimtex'
-call plug#end()
+language en_US.UTF-8
+
+" plugin manager
+" git clone https://github.com/kristijanhusak/vim-packager ~/.vim/pack/packager/opt/vim-packager
+
+function! s:packager_init(packager) abort
+  call a:packager.add('kristijanhusak/vim-packager', { 'type': 'opt' })
+  call a:packager.add('k-takata/minpac', {'type': 'opt'})
+  call a:packager.add('tpope/vim-fugitive')
+  call a:packager.add('preservim/nerdtree')
+  call a:packager.add('vim-syntastic/syntastic')
+  call a:packager.add('rhysd/vim-grammarous')
+  call a:packager.add('habamax/vim-rst')
+  call a:packager.add('arcticicestudio/nord-vim')
+  call a:packager.add('Sirver/ultisnips')
+  call a:packager.add('ckunte/latex-snippets-vim')
+  call a:packager.add('Yggdroot/indentLine')
+  call a:packager.add('rhysd/vim-grammarous')
+  call a:packager.add('jayli/vim-easycomplete')
+  call a:packager.add('pearofducks/ansible-vim')
+  call a:packager.add('chase/vim-ansible-yaml', { 'do': './UltiSnips/generate.sh' })
+  call a:packager.add('arcticicestudio/nord-vim')
+  call a:packager.add('itchyny/lightline.vim')
+endfunction  
+
+packadd vim-packager
+call packager#setup(function('s:packager_init'))
 
 " highlight
 syntax enable
 set hlsearch
 
-" wrap 
+" wrap
 set wrap linebreak nolist
 set textwidth=79
-set formatoptions+=l 
+set formatoptions+=l
 set whichwrap+=<,>,h,l
 
 " indentation rules
@@ -41,7 +53,16 @@ set undofile
 " easy complete settings
 let g:easycomplete_tab_trigger="<c-space>"
 
-" theme
+" syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" look and feel
 set number
 set showmatch
 set laststatus=2
@@ -55,7 +76,3 @@ let g:nord_bold_vertical_split_line = 1
 let g:nord_italic_comments = 1
 let g:nord_italic_comments = 1
 hi Visual term=reverse cterm=reverse guibg=Grey
-
-" latex 
-let g:vimtex_view_method = 'zathura'
-
