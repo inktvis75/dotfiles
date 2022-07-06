@@ -1,10 +1,9 @@
 sphinx
 sphinx_theme
-sphinx-book-theme
 rstcheck
 sphinxcontrib-tikz
 sphinx-jekyll-builder
 sphinx_last_updated_by_git
-ansible
 pynvim
 passlib
+neovim
