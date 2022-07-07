@@ -32,5 +32,10 @@ Plug 'f1se4/presenting_ivim.vim'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'Shougo/deoplete.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'deoplete-plugins/deoplete-lsp'
 
 call plug#end()
+
+let g:deoplete#enable_at_startup = 1

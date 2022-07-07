@@ -65,3 +65,6 @@ source ~/.config/nvim/coc.vim
 
 " Startify
 source ~/.config/nvim/startify.vim
+
+" Tex
+source ~/.config/nvim/tex.vim
