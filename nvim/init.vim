@@ -47,10 +47,11 @@ set foldmethod=indent
 
 " Styling
 set termguicolors
-colorscheme lucius
+colorscheme deep-space
 set list listchars=trail:»,tab:»-
 set fillchars+=vert:\
-hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white
+hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white
+hi Cursor ctermbg=15 ctermfg=8
 
 " Statusbar 
 source ~/.config/nvim/airline.vim
