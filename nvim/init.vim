@@ -50,6 +50,7 @@ set termguicolors
 colorscheme lucius
 set list listchars=trail:»,tab:»-
 set fillchars+=vert:\
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white
 
 " Statusbar 
 source ~/.config/nvim/airline.vim

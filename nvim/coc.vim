@@ -15,8 +15,6 @@ let g:coc_global_extensions = [
   \ ]
 
 " performance tweaks
-set nocursorline
-set nocursorcolumn
 set scrolljump=5
 set lazyredraw
 set redrawtime=10000
