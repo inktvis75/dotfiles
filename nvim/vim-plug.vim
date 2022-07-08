@@ -35,6 +35,7 @@ Plug 'honza/vim-snippets'
 Plug 'Shougo/deoplete.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'deoplete-plugins/deoplete-lsp'
+Plug 'rhysd/vim-grammarous'
 
 call plug#end()
 
