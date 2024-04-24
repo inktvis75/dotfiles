@@ -1,9 +1,0 @@
-sphinx
-sphinx_theme
-rstcheck
-sphinxcontrib-tikz
-sphinx-jekyll-builder
-sphinx_last_updated_by_git
-pynvim
-passlib
-neovim
