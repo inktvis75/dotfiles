@@ -1,0 +1,21 @@
+# Created by Zap installer
+[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
+plug "zsh-users/zsh-autosuggestions"
+plug "zap-zsh/supercharge"
+plug "zap-zsh/zap-prompt"
+plug "zsh-users/zsh-syntax-highlighting"
+
+# PATH
+export PATH="$HOME/.config/emacs/bin:$HOME/.cargo/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+
+# grep 
+if [ -d "$(brew --prefix)/opt/grep/libexec/gnubin" ]; then
+    PATH="$(brew --prefix)/opt/grep/libexec/gnubin:$PATH"
+fi
+
+# Load and initialise completion system
+autoload -Uz compinit
+compinit
+
+# Alacritty support
+preexec() { print -Pn "\e]0;$1\a" }
