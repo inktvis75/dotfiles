@@ -1,15 +1,5 @@
 ;; Dashboard https://github.com/emacs-dashboard/emacs-dashboard 
 
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
-(package-refresh-contents)
-
-(unless (package-installed-p 'dashboard)
-  (package-install 'dashboard))
-
-(unless (package-installed-p 'nerd-icons)
-  (package-install 'nerd-icons))
-
 (use-package nerd-icons
   :ensure t)
 
@@ -30,3 +20,4 @@
 
 (setq dashboard-center-content t)
 (setq dashboard-vertically-center-content t)
+
