@@ -1,1 +1,0 @@
-("~/Library/Mobile Documents/com~apple~CloudDocs/Training/dotfiles/" "~/Library/Mobile Documents/com~apple~CloudDocs/Training/lpic-102/" "~/Training/lpic-102/")
