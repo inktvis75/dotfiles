@@ -1,8 +1,12 @@
-;; Appearance
+; Appearance
 (tool-bar-mode -1)
 (tooltip-mode -1)
 (menu-bar-mode -1)
 (setq visible-bell t)
+
+; Improve performance
+(setq gc-cons-threshold 100000000)
+(add-hook 'after-init-hook (lambda () (setq gc-cons-threshold (* 10 1024 1024))))
 
 ; Packages
 (require 'cl-lib)
@@ -25,6 +29,7 @@
 
 (setq cfg-var:packages '(
   modus-themes
+  company
   treesit-auto
   dashboard
   nerd-icons
@@ -34,13 +39,23 @@
   org
   projectile
   persp-projectile
+  solaire-mode
+  golden-ratio
   treemacs
   real-auto-save
   vertico
   flyspell-correct
   magit
   exec-path-from-shell
-  ))
+  yaml-mode
+  ansible
+  lsp-mode
+  lsp-ui
+  ox-epub
+  ox-reveal
+  ox-pandoc
+  )
+)
 
 (defun cfg:install-packages ()
     (let ((pkgs (cl-remove-if #'package-installed-p cfg-var:packages)))
@@ -53,6 +68,12 @@
 
 (cfg:install-packages)
 
+; Solair Mode
+(solaire-global-mode +1)
+
+; Golden Ratio
+(golden-ratio-mode 1)
+
 ; Shell
 (setq-default shell-file-name "/opt/local/bin/zsh")
 (setq-default explicit-shell-file-name "/opt/local/bin/zsh")
@@ -60,13 +81,11 @@
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
-
 ; Autosave 
 (add-hook 'prog-mode-hook 'real-auto-save-mode)
 
 ;; Theme
-(setq prelude-theme nil)
-(load-theme 'modus-operandi :no-confirm)
+(load-theme 'modus-vivendi-tritanopia :no-confirm)
 
 ;; Tree Sitter
 (use-package treesit-auto
@@ -91,6 +110,7 @@
 (load-user-file "projectile.el")
 (load-user-file "persp.el")
 (load-user-file "orgmode.el")
+(load-user-file "language.el")
 (load-user-file "org-edu-html.el")
 (load-user-file "dashboard.el")
 (load-user-file "vertico.el")

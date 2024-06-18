@@ -1,3 +1,9 @@
+;; Loading libraries
+
+(use-package ox-reveal)
+(use-package ox-epub)
+(use-package ox-pandoc)
+
 ;; Latex
 (with-eval-after-load 'ox-latex
   (add-to-list 'org-latex-classes

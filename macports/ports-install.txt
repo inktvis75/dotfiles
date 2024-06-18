@@ -1,3 +1,4 @@
+install The
 install alacritty
 install bash
 install brotli
@@ -35,6 +36,7 @@ install lcms2
 install ld64
 install ld64-xcode
 install lerc
+install libcxx
 install libdeflate
 install libedit
 install libelf
@@ -58,6 +60,8 @@ install lz4
 install mpfr
 install ncurses
 install nettle
+install nodejs22
+install npm10
 install openssl
 install openssl3
 install ossp-uuid
@@ -66,6 +70,8 @@ install pango
 install pcre
 install pcre2
 install perl5.34
+install pkgconfig
+install pnpm
 install py312-mako
 install py312-markdown
 install py312-markupsafe
