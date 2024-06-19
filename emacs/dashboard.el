@@ -1,23 +1,21 @@
-;; Dashboard https://github.com/emacs-dashboard/emacs-dashboard 
-
-(use-package nerd-icons
-  :ensure t)
-
-(setq initial-buffer-choice (lambda () (get-buffer-create dashboard-buffer-name)))
 (use-package dashboard
-  :ensure t
-  :config
-  (dashboard-setup-startup-hook))
+    :straight t
+    :init
+    (use-package emacs
+      :custom
+      (recentf-max-menu-items 25)
+      (recentf-max-saved-items 25)
+      :config
+      (recentf-mode 1)
+      )
+    :custom
+    (initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
+    (dashboard-startup-banner 'official)
+    (dashboard-set-heading-icons t)
+    (dashboard-set-file-icons t)
+    (dashboard-set-init-info t)
+    (dashboard-center-content t)
+    (dashboard-items '((recents . 5)(projects . 5)))
 
-(setq dashboard-items '((recents   . 5)
-                        (projects  . 5)
-                        ))
-
-(setq dashboard-display-icons-p t)
-(setq dashboard-icon-type 'nerd-icons)
-(setq dashboard-set-file-icons t)
-(setq dashboard-projects-switch-function 'projectile-persp-switch-project)
-
-(setq dashboard-center-content t)
-(setq dashboard-vertically-center-content t)
-
+    :config
+    (dashboard-setup-startup-hook))

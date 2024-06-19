@@ -1,8 +1,32 @@
-;; Loading libraries
+(use-package org
+  :straight (:type built-in)
+  :defer t
+  :init
+  :config
+)
 
-(use-package ox-reveal)
-(use-package ox-epub)
-(use-package ox-pandoc)
+(use-package org-contrib
+  :straight (org-contrib
+     :type git
+     :repo "https://git.sr.ht/~bzg/org-contrib"
+     :build t)
+  :after (org)
+  :config
+  (require 'ox-extra)
+  (ox-extras-activate '(latex-header-blocks ignore-headlines))
+)
+
+(use-package ox-epub
+  :straight t
+)
+
+(use-package ox-reveal
+  :straight t
+)
+
+(use-package ox-pandoc
+  :straight t
+)
 
 ;; Latex
 (with-eval-after-load 'ox-latex
@@ -63,3 +87,4 @@
         ("kbdar" . "@@html:<kbd>&&#8594;</kbd>@@ @@latex:\\RArrow@@")
        )
 )
+

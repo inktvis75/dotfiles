@@ -5,4 +5,11 @@
 
 (use-package flyspell-correct
   :after flyspell
-  :bind (:map flyspell-mode-map ("C-;" . flyspell-correct-wrapper)))
+  :straight t 
+  :bind (:map flyspell-mode-map ("C-;" . flyspell-correct-wrapper))
+)
+
+(use-package flyspell-correct-ivy
+  :straight t           
+  :after flyspell-correct
+)

@@ -1,7 +1,11 @@
 (use-package projectile
-  :diminish
-  :bind
-  ("M-o p" . counsel-projectile-switch-project)
+  :straight t
   :config
-(projectile-mode +1)
-(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map))
+  (projectile-mode +1)
+  (setq projectile-project-search-path '("~/Training" "~/Documents"))
+)
+
+(use-package counsel-projectile
+  :after (counsel projectile)
+  :straight t
+)
