@@ -3,6 +3,7 @@
 (tooltip-mode -1)
 (menu-bar-mode -1)
 (setq visible-bell t)
+(setq warning-minimum-level :error)
 
 ; Other Defaults
 (setq tab-always-indent nil)
