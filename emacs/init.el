@@ -53,6 +53,7 @@
   (load-file (expand-file-name file user-init-dir))
 )
 
+(load-user-file "shell.el")
 (load-user-file "theme.el")
 (load-user-file "undo.el")
 (load-user-file "treemacs.el")
@@ -60,7 +61,7 @@
 (load-user-file "evil.el")
 (load-user-file "dashboard.el")
 (load-user-file "snippets.el")
-(load-user-file "ivy.el")
+(load-user-file "complete.el")
 (load-user-file "company.el")
 (load-user-file "projectile.el")
 (load-user-file "magit.el")
