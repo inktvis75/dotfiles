@@ -13,6 +13,8 @@
 (setq-default indent-tabs-mode nil)
 (setq-default evil-shift-round nil)
 
+; UTF-8
+
 ; Backup
 (setq backup-directory-alist `(("." . "~/.saves")))
 (setq backup-by-copying t)
@@ -68,5 +70,7 @@
 (load-user-file "magit.el")
 (load-user-file "org.el")
 (load-user-file "spell.el")
+(load-user-file "pdf.el")
 (load-user-file "lsp.el")
+(load-user-file "lilypond.el")
 
