@@ -66,6 +66,7 @@
 (load-user-file "snippets.el")
 (load-user-file "complete.el")
 (load-user-file "company.el")
+(load-user-file "treesitter.el")
 (load-user-file "projectile.el")
 (load-user-file "magit.el")
 (load-user-file "org.el")
