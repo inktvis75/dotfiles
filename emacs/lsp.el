@@ -67,3 +67,23 @@
   :config
   (setq rustic-format-on-save nil)
 )
+(use-package yaml-mode
+  :defer t
+)
+
+(use-package jinja2-mode
+  :defer t
+)
+
+(use-package ansible
+  :commands ansible
+  :custom-face
+  (ansible-task-label-face ((t (:foreground "#1d9a79"))))
+  :config (add-hook 'ansible-mode-hook (lambda () (flyspell-mode -1)))
+)
+
+(use-package poly-ansible
+  :straight t           
+  :defer t
+  :diminish
+)

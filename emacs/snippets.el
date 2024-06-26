@@ -1,12 +1,11 @@
-(use-package yasnippet-snippets
-  :disabled
-  :straight t)
-
 (use-package yasnippet
   :straight t
+  :diminish yas-minor-mode
   :config
-  (setq yas-snippet-dirs
-   `(,(concat (expand-file-name user-emacs-directory) "snippets")
-    )
-  )
+  (use-package yasnippet-snippets :straight t)
+  :hook (after-init . yas-global-mode)
+)
+
+(use-package consult-yasnippet  
+  :straight t
 )
