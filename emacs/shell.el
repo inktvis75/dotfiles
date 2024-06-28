@@ -23,3 +23,10 @@
   (setq vterm-max-scrollback 10000)
 )
 
+; GPG and SSH 
+(use-package pinentry
+  :defer nil
+  :straight t
+  :config (pinentry-start)
+  :init (setq epa-pinentry-mode 'loopback)
+)
