@@ -69,14 +69,17 @@
 )
 (use-package yaml-mode
   :defer t
+  :straight t
 )
 
 (use-package jinja2-mode
+  :straight t
   :defer t
 )
 
 (use-package ansible
-  :commands ansible
+  :after yaml-mode
+  :straight t  
   :custom-face
   (ansible-task-label-face ((t (:foreground "#1d9a79"))))
   :config (add-hook 'ansible-mode-hook (lambda () (flyspell-mode -1)))
