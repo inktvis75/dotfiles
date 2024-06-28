@@ -1,3 +1,8 @@
+(use-package htmlize
+    :straight t 
+    :custom (org-export-htmlize-output-type 'css)
+)
+
 (use-package lsp-mode
     :straight t
     :custom
