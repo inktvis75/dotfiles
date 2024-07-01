@@ -88,3 +88,5 @@
        )
 )
 
+;; Export underscore problem
+(setq org-export-with-sub-superscripts nil)
