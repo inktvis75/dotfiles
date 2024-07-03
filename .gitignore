@@ -1,4 +1,5 @@
 .cache
 .lspsession-v1
-projectile-bookmarks.eld
-recentf
+emacs/projectile-bookmarks.eld
+emacs/recentf
+emacs/network-security.data
