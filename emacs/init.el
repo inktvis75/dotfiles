@@ -72,4 +72,5 @@
 (load-user-file "spell.el")
 (load-user-file "pdf.el")
 (load-user-file "lilypond.el")
+(load-user-file "hugo.el")
 
