@@ -68,7 +68,6 @@
 
 (customize-set-value 'org-latex-with-hyperref nil)
 (setq org-latex-listings 'minted)
-(setq org-latex-packages-alist '(("outputdir=../build" "minted" nil)))
 (setq org-latex-pdf-process (list "latexmk -f -lualatex %f"))
 (setq org-latex-pdf-process '("latexmk -shell-escape -f -lualatex %f"))
 
